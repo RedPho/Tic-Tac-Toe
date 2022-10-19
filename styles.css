@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .container {
@@ -13,4 +14,18 @@ body {
 
 button {
     font-size: larger;
+}
+
+table {
+    margin: 20px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+#reset {
+    margin-bottom: 20px;
 }

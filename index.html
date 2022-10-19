@@ -9,6 +9,7 @@
   <title>Tic-Tac-Toe</title>
 </head>
 <body>
+  <button id="reset">Clear Gameboard</button>
   <div class="container">
     <button id="0"></button>
     <button id="1"></button>
@@ -20,5 +21,27 @@
     <button id="7"></button>
     <button id="8"></button>
   </div>
+  <p id="result"></p>
+  <form action="">
+    <p>
+      <label>Player 1(X):<input type="text" name="player1" id="player1" required></label>
+    </p>
+    <p>
+      <label>Player 2(O):<input type="text" name="player2" id="player2" required></label>
+    </p>
+  </form>
+  <button id="setPlayers">Submit</button>
+  <table>
+    <tr>
+      <th id="player1header">Player 1</th>
+      <th id="player2header">Player 2</th>
+    </tr>
+    <tr>
+      <td id="player1score">0</td>
+      <td id="player2score">0</td>
+    </tr>
+  </table>
+  <button id="resetScores">Reset Scores</button>
+  
 </body>
 </html>
