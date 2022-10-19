@@ -34,8 +34,6 @@ function updateTable() {
           gameboard.table[i] = currentBlock.innerText;
         }
 
-        console.log(currentUser);
-
         if (currentUser.userName == firstUser.userName) {
           currentUser.userName = secondUser.userName;
           currentUser.XorO = secondUser.XorO;
@@ -44,11 +42,8 @@ function updateTable() {
           currentUser.userName = firstUser.userName;
           currentUser.XorO = firstUser.XorO;
         }
-
-        console.log(gameboard.table);
         setRaundWinner();
       }
-      
     })
   }
 }
@@ -56,7 +51,6 @@ function updateTable() {
 function setRaundWinner(){
   //to write less:
   let gt = gameboard.table;
-
   if( 
   ((gt[0] == "X") && (gt[0] == gt[1]) && (gt[1] == gt[2])) || 
   ((gt[3] == "X") && (gt[3] == gt[4]) && (gt[4] == gt[5])) ||
@@ -70,7 +64,6 @@ function setRaundWinner(){
     makeButtonsUnclickable = "yes"
     firstUser.score++;
     document.querySelector("#player1score").innerText = firstUser.score;
-    console.log(firstUser);
   }
 
   else if( 
@@ -86,7 +79,6 @@ function setRaundWinner(){
       makeButtonsUnclickable = "yes"
       secondUser.score++;
       document.querySelector("#player2score").innerText = secondUser.score;
-      console.log(secondUser);
     }
   else {
     let x = 0;
@@ -109,8 +101,6 @@ function setPlayerNames(){
   else{
     firstUser.userName = document.querySelector("#player1").value;
     secondUser.userName = document.querySelector("#player2").value;
-    console.log(firstUser.userName);
-    console.log(secondUser.userName);
     currentUser = playerFactory(firstUser.userName, firstUser.XorO);
     document.querySelector("#player1").value = "";
     document.querySelector("#player2").value = "";
@@ -148,5 +138,4 @@ const game = ( () => {
   resetButton.addEventListener("click", clearScores);
 
   updateTable();
-  console.log(gameboard.table);
 } )();
