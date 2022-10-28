@@ -4,16 +4,26 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+    font-family: papyrus, Arial, Tahoma, Serif;
+    font-size: larger;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 50px);
-    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    font-size: xx-large;
 }
 
 button {
     font-size: larger;
+    border-width: 0px;
+    cursor: pointer;
+    background-color: #6c64e4;
+    color: white;
+    font-family: papyrus, Arial, Tahoma, Serif;
+    box-shadow: 2px 2px 2px #2ebf91;
 }
 
 table {
@@ -28,4 +38,36 @@ td, th {
 
 #reset {
     margin-bottom: 20px;
+}
+
+.b0, .b1, .b2 {
+    border-top: 0;
+}
+
+.b0, .b3, .b6 {
+    border-left: 0;
+}
+
+.b2, .b5, .b8 {
+    border-right: 0;
+}
+
+.b6, .b7, .b8 {
+    border-bottom: 0;
+}
+
+.gamebtn {
+    border-width: 1px;
+}
+
+button:hover {
+    background-color: cornflowerblue;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px;
 }
